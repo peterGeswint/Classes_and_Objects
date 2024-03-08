@@ -19,12 +19,16 @@ namespace Classes_and_Objects___Example
 
         private void btnDisplay_Click(object sender, EventArgs e)
         {
-            Classes_Objects classes = new Classes_Objects();
-            classes.Name = "Peter";
+            Junior webDev = new Junior();
+            Classes_Objects classes = new Classes_Objects("Peter", "Geswint", 10000);
             lblName.Text = classes.Name;
-            classes.Surname = "Geswint";
             lblSurname.Text = classes.Surname;
+            lblFees.Text = classes.Fees.ToString("C");
             lblSpeak.Text = classes.Speak();
+            lblTax.Text = classes.GetTax(classes.Fees).ToString("C");
+            lblProgram.Text = webDev.Program();
+            lblCoffee.Text = webDev.Coffee();
+            lblSleep.Text = webDev.Sleep();
         }
     }
 }
